@@ -1,0 +1,25 @@
+{
+  "name": "moviesapp",
+  "version": "1.0.0",
+  "description": "moviesApp project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GKonar/MoviesAPP.git"
+  },
+  "keywords": [
+    "nodeJS",
+    "expressJS",
+    "mongoDB",
+    "React"
+  ],
+  "author": "Grzegorz Konarski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GKonar/MoviesAPP/issues"
+  },
+  "homepage": "https://github.com/GKonar/MoviesAPP#readme"
+}
