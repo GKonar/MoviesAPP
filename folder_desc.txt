@@ -1,0 +1,20 @@
+SRC - w tym katalogu znajdować się będzie cała nasza aplikacja API
+
+PUBLIC - w tym katalogu będą znajdowały się wszystkie rzeczy, które będziemy chcieli dzielić z frontem (np obrazki)
+
+CONFIG - katalog jest wymagany do poprawnego działania paczki CONFIG npm, który pozwoli nam na konfigurowanie aplikacji względem danego środowiska.
+
+Po kolei
+- Controllers - Pliki te będą odpowiadały za całość naszej aplikacji. To kontroler będzie przejmować request od użytkownika i decydował jaka akcja ma zostać wykonana i co zwrócić użytkownikowi
+
+Events - poczytaj proszę o NodeJS middlewares bo tutaj z tego będziemy korzystać
+
+Models - tutaj będą modele MongoDB, ale na razie to na bok
+
+Routes - tutaj będą się znajdowały nasze wszystkie routingi do konkretnych akcji. Czyli no pobieranie listy filmów będzie miało osobny plik routingowy niżeli pobranie konkretnego filmu
+
+Services - serwisy są wykorzystywane przez kontrolery. Kontroler decyduje jaki serwis wywołać i jaką metodę z danego serwisu
+
+Test - tutaj znajdować się będą testy jednostkowe
+
+Validators - tutaj będą znajdowały się nasze walidatory requestów. Czyli np wymagamy, żeby dodawanie nowego filmu miało określony format danych i np pola wymagane takie jak nazwa filmu, rok itd. Te pola określimy sobie w walidatorze jako wymagane i on sam za nas będzie to sprawdzał
