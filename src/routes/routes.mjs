@@ -1,5 +1,6 @@
 import { BaseController } from "../controllers/base.controller";
 import MoviesListRoutes from "./movies-list.routes";
+import MovieRoutes from "./movie.routes";
 
 export default class Routes {
 
@@ -8,5 +9,6 @@ export default class Routes {
             .get((req, res) => BaseController.info(req, res));
         
         MoviesListRoutes.routes(app);
+        MovieRoutes.routes(app);
     }
 }
