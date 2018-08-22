@@ -1,15 +1,36 @@
-import MovieServicies from '../services/movie.services';
+import MovieServices from '../services/movie.services';
 
 export class MovieController {
 
     static getMovie(req, res) {
-        MovieServicies.getMovie()
+        MovieServices.getMovie(req.params.id)
         .then((response) => {
-            res.status(200).send(req.params.id)
+            res.status(200).send(response.data)
         })
         .catch((response) => {
-            res.status(400).send(req.params.id) 
+            res.status(400).send(response.data) 
         })
     }
+
+    static deleteMovie(req, res) {
+        MovieServices.deleteMovie(req.params.id)
+        .then((response) => {
+            res.status(200).send(response.data)
+        })
+        .catch((response) => {
+            res.status(400).send(response.data)
+        })
+    }
+
+    static updateMovie(req, res) {
+        MovieServices.updateMovie(req.params.id)
+        .then((response) => {
+            res.status(200).send(response.data)
+        }) 
+        .catch((response) => {
+            res.status(400).send(response.data)
+        })
+    }
+
 }
 
