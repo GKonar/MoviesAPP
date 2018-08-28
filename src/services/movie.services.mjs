@@ -9,8 +9,8 @@ export default class MovieServices {
         return axios.delete(`http://localhost:3000/movies/${movieId}`)
     }
     
-    static updateMovie(movieId) {
-        return axios.put(`http://localhost:3000/movies/${movieId}`)
+    static updateMovie(movieId, data) {
+        return axios.put(`http://localhost:3000/movies/${movieId}`, data)
     }
 
 }

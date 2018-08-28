@@ -23,7 +23,7 @@ export class MovieController {
     }
 
     static updateMovie(req, res) {
-        MovieServices.updateMovie(req.params.id)
+        MovieServices.updateMovie(req.params.id, req.body)
         .then((response) => {
             res.status(200).send(response.data)
         }) 

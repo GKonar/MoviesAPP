@@ -15,11 +15,32 @@
       "posterUrl": "http://dummyimage.com/500x500.bmp/cc0000/ffffff"
     },
     {
+      "id": "4b8d8b10-baf3-4065-9ddb-02e9e091b47f",
+      "title": "19th Wife, The",
+      "author": "Eberto Bris",
+      "released": "2016-02-19",
+      "posterUrl": "http://dummyimage.com/500x500.png/ff4444/ffffff"
+    },
+    {
+      "id": "d3744a3c-3e6e-4996-a090-45f47d531724",
+      "title": "County Teacher, The (Venkovský ucitel)",
+      "author": "Jordana Probart",
+      "released": "2007-01-31",
+      "posterUrl": "http://dummyimage.com/500x500.bmp/dddddd/000000"
+    },
+    {
       "id": "ecb51466-c1e3-4a76-8989-4c3b58c14544",
       "title": "King and the Clown, The (Wang-ui namja)",
       "author": "Ivonne Tooley",
       "released": "2006-04-23",
       "posterUrl": "http://dummyimage.com/500x500.png/dddddd/000000"
+    },
+    {
+      "id": "4453ec15-2307-4d24-ad2d-0e6df0b11854",
+      "title": "Against All Flags",
+      "author": "Zuzana Jovasevic",
+      "released": "2012-03-06",
+      "posterUrl": "http://dummyimage.com/500x500.bmp/cc0000/ffffff"
     },
     {
       "id": "a0008e15-c647-43ba-83ce-c630e7bdaf2a",
@@ -134,6 +155,13 @@
       "posterUrl": "http://dummyimage.com/500x500.jpg/ff4444/ffffff"
     },
     {
+      "id": "ca59e721-8290-4024-b413-73bd3a892e05",
+      "title": "Quest for Fire (Guerre du feu, La)",
+      "author": "Leland Stallworthy",
+      "released": "2004-09-04",
+      "posterUrl": "http://dummyimage.com/500x500.bmp/dddddd/000000"
+    },
+    {
       "id": "efb7912c-a241-40cf-8854-026575d7d253",
       "title": "Torment (Hets)",
       "author": "Redford Kingscott",
@@ -148,7 +176,11 @@
       "posterUrl": "http://dummyimage.com/500x500.bmp/dddddd/000000"
     },
     {
-      "id": "129c0df7-cb91-4767-b0aa-c2b2a01bdd69"
+      "id": "129c0df7-cb91-4767-b0aa-c2b2a01bdd69",
+      "title": "Thieves by Law (Ganavim Ba Hok)",
+      "author": "Cam Storrier",
+      "released": "2009-08-27",
+      "posterUrl": "http://dummyimage.com/500x500.png/dddddd/000000"
     },
     {
       "id": "beda193b-4f30-4f08-b1c3-c37fce0ef50e",
@@ -501,7 +533,11 @@
       "posterUrl": "http://dummyimage.com/500x500.png/dddddd/000000"
     },
     {
-      "id": "2ec699e3-ff7a-4636-bd49-c289f8d1b24a"
+      "id": "2ec699e3-ff7a-4636-bd49-c289f8d1b24a",
+      "title": "Step Into Liquid",
+      "author": "Vilhelmina Stoller",
+      "released": "2017-07-11",
+      "posterUrl": "http://dummyimage.com/500x500.bmp/cc0000/ffffff"
     },
     {
       "id": "76a1fffc-9ecc-44bd-8f94-91b5a43f5671",
@@ -616,11 +652,11 @@
       "posterUrl": "http://dummyimage.com/500x500.jpg/5fa2dd/ffffff"
     },
     {
-      "id": "8a20f6c7-45be-489a-bf93-bd2a5f159202",
-      "title": "Duchess, The",
-      "author": "Jori Normanville",
-      "released": "2014-02-04",
-      "posterUrl": "http://dummyimage.com/500x500.jpg/cc0000/ffffff"
+      "title": "Duchess, The(update)",
+      "author": "Jori Normanville(update)",
+      "released": "2014-02-04(update)",
+      "posterUrl": "http://dummyimage.com/500x500.jpg/cc0000/ffffff (update)",
+      "id": "8a20f6c7-45be-489a-bf93-bd2a5f159202"
     },
     {
       "id": "3cf8e680-2a89-46fe-ac02-16de59756121",
