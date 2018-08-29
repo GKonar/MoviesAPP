@@ -32,5 +32,14 @@ export class MovieController {
         })
     }
 
+    static addMovie(req, res) {
+        MovieServices.addMovie(req.body)
+        .then((response) => {
+            res.status(200).send(response.data)
+        })
+        .catch((response) => {
+            res.status(400).send(response.data)
+        })
+    }
 }
 

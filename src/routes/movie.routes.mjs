@@ -12,5 +12,7 @@ export default class MovieRoutes {
         app.route('/movies/:id')
             .put((req, res) => MovieController.updateMovie(req, res));
 
+        app.route('/movies/')
+            .post((req, res) => MovieController.addMovie(req, res));
     }
 }
