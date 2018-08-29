@@ -1,11 +1,7 @@
 {
   "movies": [
     {
-      "id": "823f7252-4f96-4b22-948b-672b932cc790",
-      "title": "Rise of the Zombies",
-      "author": "Delly Lared",
-      "released": "2017-11-24",
-      "posterUrl": "http://dummyimage.com/500x500.png/cc0000/ffffff"
+      "id": "823f7252-4f96-4b22-948b-672b932cc790"
     },
     {
       "id": "bdc372b0-b382-490d-8056-da3ca8639667",
