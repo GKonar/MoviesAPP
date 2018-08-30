@@ -1,4 +1,7 @@
 import MovieServices from '../services/movie.services';
+import uuid from 'uuid';
+
+const id = uuid.v4();
 
 export class MovieController {
 
@@ -33,7 +36,7 @@ export class MovieController {
     }
 
     static addMovie(req, res) {
-        MovieServices.addMovie(req.body)
+        MovieServices.addMovie(id, req.body)
         .then((response) => {
             res.status(200).send(response.data)
         })
