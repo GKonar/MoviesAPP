@@ -1,6 +1,7 @@
 import { BaseController } from "../controllers/base.controller";
 import MoviesListRoutes from "./movies-list.routes";
 import MovieRoutes from "./movie.routes";
+import { errors } from 'celebrate';
 
 export default class Routes {
 
@@ -10,5 +11,7 @@ export default class Routes {
         
         MoviesListRoutes.routes(app);
         MovieRoutes.routes(app);
+
+        app.use(errors());
     }
 }
