@@ -5,7 +5,7 @@ import {MoviesList} from "../validators/movies.validator"; // so far not importa
 export default class MovieListRoutes {
 
     static routes(app)  {
-        app.route('/movies')
+        app.route('/movies') 
             .get(validate(MoviesList), (req, res) => MoviesController.getMovies(req, res));
     }
 }
