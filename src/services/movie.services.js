@@ -1,7 +1,4 @@
 import axios from 'axios';
-// import uuid from 'uuid';
-
-// const id = uuid.v4();
 
 export default class MovieServices {
     static getMovie(movieId) {
@@ -16,10 +13,7 @@ export default class MovieServices {
         return axios.put(`http://localhost:3000/movies/${movieId}`, data)
     }
 
-    static addMovie(movieId, data ) {
-        return axios.post(`http://localhost:3000/movies/${movieId}`, data)
+    static addMovie(data) {
+        return axios.post(`http://localhost:3000/movies/`, data)
     }
 }
-
-// Z tego co rozumiem to nowe id zostanie wygenerowane za pomocą uuid, zostanie 
-// przekazane z movie.controller
