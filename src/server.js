@@ -7,7 +7,7 @@ import Database from './config/database';
 const app = express();
 const port = process.env.PORT || 3001;
 
-Database.init()
+Database.init();
 Middleware.init(app);
 Routes.init(app);
 
