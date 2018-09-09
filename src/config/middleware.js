@@ -6,11 +6,11 @@ export default class Middleware {
 
     static init(app) {
         app.use(bodyParser.json());
-        app.use(bodyParser.urlencoded({ extended: false }));
+        app.use(bodyParser.urlencoded({extended: false}));
 
         app.use(express.static('public'));
 
-        if(process.env.NODE_ENV === 'dev' || process.env.NODE_ENV === 'test') {
+        if (process.env.NODE_ENV !== 'prod') {
             app.use(morgan('dev'));
         }
     }

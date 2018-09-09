@@ -1,7 +1,7 @@
 import express from 'express';
 
 import Middleware from './config/middleware';
-import Routes from "./routes/routes.mjs";
+import Routes from "./routes/routes.js";
 
 const app = express();
 const port = process.env.PORT || 3001;
