@@ -13,5 +13,3 @@ export class MoviesController {
     } 
 
 }
-
-//PROMISES
