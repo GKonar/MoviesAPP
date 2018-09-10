@@ -8,7 +8,7 @@
     "server": "json-server --watch db.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
-    "fixtures:load": "NODE_ENV=dev src/fixtures/_load.js"
+    "fixtures": "mongofixtures MoviesAppDB src/fixtures/_load.js"
   },
   "repository": {
     "type": "git",

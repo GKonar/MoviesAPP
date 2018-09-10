@@ -2,12 +2,12 @@ import { connect } from 'pow-mongodb-fixtures';
 // import * as config from 'config';
 import MoviesFixtures from "./movies.fixtures";
 
-// const fixtures = connect(MoviesAppDB);
+const fixtures = connect(MoviesAppDB);
 
-const fixtures = connect('MoviesAppDB', {
-    host: 'http://localhost:3001/movies/',
-    port: 27017
-});
+// const fixtures = connect('MoviesAppDB', {
+//     host: 'http://localhost:3001/movies/',
+//     port: 27017
+// });
 
 fixtures.clear(function(err) {
     if(err) throw err;
