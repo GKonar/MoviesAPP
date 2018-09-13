@@ -1,12 +1,15 @@
 import { Joi } from 'celebrate';
 
-export const MoviesList = {
+export const MovieUpdate = {
     body: {
-        movies: Joi.array().required()
+        title: Joi.string().required(),
+        author: Joi.string().required(),
+        released: Joi.date().required(),
+        posterUrl: Joi.string().required()
     }
 };
 
-export const MovieUpdate = {
+export const MovieAdd = {
     body: {
         title: Joi.string().required(),
         author: Joi.string().required(),

@@ -7,7 +7,8 @@
     "start": "nodemon --exec babel-node --presets env,stage-2 src/server.js",
     "server": "json-server --watch db.json",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore"
+    "gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
+    "fixtures": "babel-node --presets env src/fixtures/_load.js"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,8 @@
     "joi": "^13.6.0",
     "mocha": "^5.2.0",
     "mongoose": "^5.2.8",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "pow-mongodb-fixtures": "^0.14.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
