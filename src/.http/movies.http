@@ -1,0 +1,4 @@
+GET http://localhost:3001/movies
+Accept: application/json
+
+###

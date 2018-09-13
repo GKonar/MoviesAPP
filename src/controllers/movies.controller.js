@@ -1,15 +1,15 @@
-import MoviesServicies from "../services/movies.services";
+import MovieService from "../services/movies.service";
 
 export class MoviesController {
 
     static getMovies(req, res) {
-        MoviesServicies.getMovies()
-        .then((response) => {
-            res.status(200).send(response.data);
-        })
-        .catch((response) => {
-            res.status(400).send(response.data);
-        })
-    } 
+        MovieService.getMovies()
+            .then((movies) => {
+                res.status(200).send(movies);
+            })
+            .catch((error) => {
+                res.status(400).send(error);
+            })
+    }
 
 }
