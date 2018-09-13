@@ -16,6 +16,4 @@ export default class MovieServices {
     static addMovie(data) {
         return axios.post(`http://localhost:3000/movies/`, data)
     }
-
 }
-
