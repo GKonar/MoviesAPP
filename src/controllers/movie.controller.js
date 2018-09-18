@@ -3,7 +3,7 @@ import MovieServices from '../services/movie.services';
 export class MovieController {
 
     static getMovie(req, res) {
-        MovieServices.getMovie(id)
+        MovieServices.getMovie(req.params.id)
         .then((movie) => {
             res.status(200).send(movie)
         })
@@ -13,7 +13,7 @@ export class MovieController {
     }
 
     static deleteMovie(req, res) {
-        MovieServices.deleteMovie(id)
+        MovieServices.deleteMovie(req.params.id)
         .then((movie) => {
             res.status(200).send(movie)
         })
@@ -23,7 +23,7 @@ export class MovieController {
     }
 
     static updateMovie(req, res) {
-        MovieServices.updateMovie(id, data)
+        MovieServices.updateMovie(req.params.id, req.body)
         .then((movie) => {
             res.status(200).send(movie)
         }) 
@@ -33,7 +33,7 @@ export class MovieController {
     }
 
     static addMovie(req, res) {
-        MovieServices.addMovie(data)
+        MovieServices.addMovie(req.body)
         .then((data) => {
             res.status(200).send(data)
         })

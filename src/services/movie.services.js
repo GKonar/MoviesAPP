@@ -1,4 +1,3 @@
-// import axios from 'axios';
 import { Movie } from '../models/movie.model'
 
 export default class MovieServices {
@@ -20,7 +19,7 @@ export default class MovieServices {
         })
     }
     
-    static updateMovie(id) {
+    static updateMovie(id, data) {
         return new Promise((resolve, reject) => {
             Movie.findByIdAndUpdate(id, data, { new: true }, (err, data) => {
               if (err) reject(err);
@@ -29,7 +28,7 @@ export default class MovieServices {
         })
     }
 
-    static addMovie() {
+    static addMovie(data) {
         return new Promise((resolve, reject) => {
             let newMovie = new Movie(data);
             newMovie.save((err, data) => {
