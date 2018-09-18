@@ -1,9 +1,9 @@
-import MovieService from "../services/movies.service";
+import MoviesService from "../services/movies.service";
 
 export class MoviesController {
 
     static getMovies(req, res) {
-        MovieService.getMovies()
+        MoviesService.getMovies()
             .then((movies) => {
                 res.status(200).send(movies);
             })
@@ -11,5 +11,4 @@ export class MoviesController {
                 res.status(400).send(error);
             })
     }
-
 }
