@@ -1,5 +1,5 @@
 ###
-GET http://localhost:3001/movies/5ba2505f57d47010718a2c3b
+GET http://localhost:3001/movies/5ba2bc67957440093a7b943a
 Accept: application/json
 
 > {%

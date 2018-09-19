@@ -5,7 +5,6 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon --exec babel-node --presets env,stage-2 src/server.js",
-    "server": "json-server --watch db.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "fixtures": "babel-node --presets env src/fixtures/_load.js"
@@ -31,6 +30,7 @@
     "celebrate": "^8.0.1",
     "chai": "^4.1.2",
     "config": "^2.0.1",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "joi": "^13.6.0",
     "mocha": "^5.2.0",
@@ -42,7 +42,6 @@
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
-    "json-server": "^0.14.0",
     "nodemon": "^1.18.4"
   }
 }
