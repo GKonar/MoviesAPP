@@ -1,12 +1,77 @@
-GET http://localhost:3001/movies/5ba1165e2e8a2a566bbc20fa
+###
+GET http://localhost:3001/movies/5ba2505f57d47010718a2c3b
 Accept: application/json
 
-###
-DELETE http://localhost:3001/movies/5ba1165e2e8a2a566bbc20fa
-Accept: application/json
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+
+client.test("Response content-type is json", function() {
+  var type = response.contentType.mimeType;
+  client.assert(type === "application/json", "Expected 'application/json' but received '" + type + "'");
+});
+
+client.test("Headers option exists", function() {
+  client.assert(response.body.hasOwnProperty("title"), "Cannot find 'title' option in response");
+});
+%}
 
 ###
-PUT http://localhost:3001/movies/5ba1165e2e8a2a566bbc20fa
+DELETE http://localhost:3001/movies/5ba212d3c5f0718f5389d4ad
 Accept: application/json
 
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+%}
+
 ###
+POST http://localhost:3001/movies/
+Content-Type: application/json
+
+{
+  "title": "Takin care of the child all day long",
+  "author": "Justynos Konarskonoris",
+  "released": "2007-01-31T00:00:00.000Z",
+  "posterUrl": "http://dummyimage.com/500x500.bmp/dddddd/00322332322000"
+}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+
+client.test("Response content-type is json", function() {
+  var type = response.contentType.mimeType;
+  client.assert(type === "application/json", "Expected 'application/json' but received '" + type + "'");
+});
+
+client.test("Headers option exists", function() {
+  client.assert(response.body.hasOwnProperty("title"), "Cannot find 'headers' option in response");
+});
+%}
+###
+PUT http://localhost:3001/movies/5ba2505f57d47010718a2c3b
+Content-Type: application/json
+
+{
+  "title": "Takin care of the child all day long(after update)",
+  "author": "Justynos Konarskonoris(after update)",
+  "released": "2007-01-31T00:00:00.000Z",
+  "posterUrl": "http://dummyimage.com/500x500.bmp/dddddd/00322332322000"
+}
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+
+client.test("Response content-type is json", function() {
+  var type = response.contentType.mimeType;
+  client.assert(type === "application/json", "Expected 'application/json' but received '" + type + "'");
+});
+%}
+###
+
