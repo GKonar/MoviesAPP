@@ -1,12 +1,15 @@
 import {Movie} from '../models/movie.model'
 
 export default class MoviesService {
-    static getMovies() {
+    static getMovies(limit, offset) {
         return new Promise((resolve, reject) => {
-            Movie.find({}, (err, movies) => {
-                if (err) reject(err);
-                resolve(movies);
-            })
+            Movie.find({})
+                .skip(offset)
+                .limit(limit)
+                .exec((err, movies) => {
+                    if (err) reject(err);
+                    resolve(movies);
+                })
         });
     }
 };
