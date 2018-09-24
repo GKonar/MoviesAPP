@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import  {}  from 'dotenv/config';
 
 export default class Database {
     

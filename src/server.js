@@ -1,5 +1,6 @@
 import express from 'express';
-import  {}  from 'dotenv/config';
+import * as dotenv from 'dotenv';
+dotenv.config({path: '.env'});
 
 import Middleware from './config/middleware';
 import Routes from "./routes/routes.js";

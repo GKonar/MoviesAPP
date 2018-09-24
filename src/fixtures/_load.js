@@ -1,6 +1,6 @@
 import { connect } from 'pow-mongodb-fixtures';
-import  {}  from 'dotenv/config';
-// import * as config from 'config';
+import * as dotenv from 'dotenv';
+dotenv.config();
 import MoviesFixtures from "./movies.fixtures";
 
 
