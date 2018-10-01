@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
 export const MovieSchema = new Schema ({
     title: String,
@@ -10,4 +10,4 @@ export const MovieSchema = new Schema ({
     posterUrl: String
 });
 
- export const Movie = mongoose.model('Movie', MovieSchema);
+export const Movie = mongoose.model('Movie', MovieSchema);
