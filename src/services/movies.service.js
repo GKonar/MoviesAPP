@@ -5,7 +5,7 @@ export default class MoviesService {
         return new Promise((resolve, reject) => {
             Movie.find({})
                 .skip(offset)
-                .limit(limit)
+                .limit(limit)                       //Pagination options
                 .exec((err, movies) => {
                     if (err) reject(err);
                     resolve(movies);
@@ -13,3 +13,4 @@ export default class MoviesService {
         });
     }
 };
+

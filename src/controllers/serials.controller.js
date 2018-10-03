@@ -1,17 +1,19 @@
-export class SerialController {
+import SerialsService from '../services/serials.service';
+
+export class SerialsController {
 
     static getSerials(req, res) {       // get all list of series
-        SerialServices.getSerials()     // Add pagination later
-            .then((serials) => {
-                res.status(200).send(serials);
-            })
-            .catch((error) => {
-                res.status(400).send(error);
-            })
+        SerialsService.getSerials()     // Add pagination later
+        .then((serials) => {
+            res.status(200).send(serials);
+        })
+        .catch((error) => {
+            res.status(400).send(error);
+        })
     }
 
     static getSerial(req, res) {
-        SerialServices.getSerial(req.params.id)
+        SerialsService.getSerial(req.params.id)
         .then((serial) => {
             res.status(200).send(serial);
         })
@@ -21,7 +23,7 @@ export class SerialController {
     }
 
     static deleteSerial(req, res) {
-        SerialServices.deleteSerial(req.params.id)
+        SerialsService.deleteSerial(req.params.id)
         .then((serial) => {
             res.status(200).send(serial);
         })
@@ -31,7 +33,7 @@ export class SerialController {
     }
 
     static updateSerial(req, res) {
-        SerialServices.updateSerial(req.params.id, req.body)
+        SerialsService.updateSerial(req.params.id, req.body)
         .then((serial) => {
             res.status(200).send(serial);
         })
@@ -41,7 +43,7 @@ export class SerialController {
     }
 
     static createSerial(req, res) {
-        SerialServices.addSerial(req.body)
+        SerialsService.createSerial(req.body)
         .then((data) => {
             res.status(200).send(data);
         })
@@ -50,3 +52,5 @@ export class SerialController {
         })
     }
 }
+
+// need imports
