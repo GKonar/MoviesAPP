@@ -1,5 +1,20 @@
+### GET ALL SERIALS
+GET http://localhost:3001/serials?page=0
+Accept: application/json
+
+> {%
+client.test("Request executed successfully", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+
+client.test("Response content-type is json", function() {
+  var type = response.contentType.mimeType;
+  client.assert(type === "application/json", "Expected 'application/json' but received '" + type + "'");
+});
+%}
 ###
-GET http://localhost:3001/movies/5bb4f53169c3a93bae3924bb
+
+GET http://localhost:3001/serials/5bb6680fe4771314e9253a28
 Accept: application/json
 
 > {%
@@ -16,9 +31,9 @@ client.test("Headers option exists", function() {
   client.assert(response.body.hasOwnProperty("title"), "Cannot find 'title' option in response");
 });
 %}
-
 ###
-DELETE http://localhost:3001/movies/5ba212d3c5f0718f5389d4ad
+
+DELETE http://localhost:3001/serials/5bb4f53169c3a93bae3924d7
 Accept: application/json
 
 > {%
@@ -28,14 +43,16 @@ client.test("Request executed successfully", function() {
 %}
 
 ###
-POST http://localhost:3001/movies/
+
+POST http://localhost:3001/serials/
 Content-Type: application/json
 
 {
-  "title": "Takin care of the child all day long",
-  "author": "Justynos Konarskonoris",
-  "released": "2007-01-31T00:00:00.000Z",
-  "posterUrl": "http://dummyimage.com/500x500.bmp/dddddd/00322332322000"
+  "title":"Iron Fist",
+  "author":"Scott Buck",
+  "seasons":2,
+  "episodes":23,
+  "releaseDate":"2017-03-17"
 }
 
 > {%
@@ -53,14 +70,16 @@ client.test("Headers option exists", function() {
 });
 %}
 ###
-PUT http://localhost:3001/movies/5ba2505f57d47010718a2c3b
+
+PUT http://localhost:3001/serials/5bb6680fe4771314e9253a28
 Content-Type: application/json
 
 {
-  "title": "Takin care of the child all day long(after update)",
-  "author": "Justynos Konarskonoris(after update)",
-  "released": "2007-01-31T00:00:00.000Z",
-  "posterUrl": "http://dummyimage.com/500x500.bmp/dddddd/00322332322000"
+  "title":"Luke Cage(updated)",
+  "author":"Cheo Hodari Coker(updated)",
+  "seasons":2,
+  "episodes":26,
+  "releaseDate":"2016-02-08"
 }
 
 > {%
@@ -76,3 +95,9 @@ client.test("Response content-type is json", function() {
 
 ###
 
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);

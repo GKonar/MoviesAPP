@@ -1,4 +1,4 @@
 export const paginationOptions = {
-    limit: 5,
+    limit: 25,
     offset: 0
 };

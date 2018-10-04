@@ -1,7 +1,8 @@
 import { connect } from 'pow-mongodb-fixtures';
 import * as dotenv from 'dotenv';
 dotenv.config();
-import MoviesFixtures from "./movies.fixtures";
+import MoviesFixtures from './movies.fixtures';
+import SerialsFixtures from './serials.fixtures';
 
 
 const fixtures = connect(process.env.URL);
@@ -12,6 +13,11 @@ fixtures.clear(function(err) {
 
     fixtures.load(MoviesFixtures, (err) => {
         if (err) throw err;
-        console.log('Movies fixtures loaded')
+        console.log('Movies fixtures loaded');
     });
+
+    fixtures.load(SerialsFixtures, (err) => {
+        if (err) throw (err);
+        console.log('Serials fixtures loaded');
+    })
 });
