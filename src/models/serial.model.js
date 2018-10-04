@@ -10,4 +10,4 @@ export const SerialSchema = new Schema({
     releaseDate: Date
 });
 
-export const Serial = mongoose.model('Serial', SerialSchema);
+export const Serial = mongoose.model('Serial', SerialSchema); // on model we can work

@@ -1,4 +1,4 @@
-GET http://localhost:3001/movies?page=1
+GET http://localhost:3001/movies?page=0
 Accept: application/json
 
 ###

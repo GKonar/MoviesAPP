@@ -1,19 +1,22 @@
-import { Serial } from '../models/serial.model';
+import {Serial} from '../models/serial.model';
 
 export default class SerialsService {
-    static getSerials() {
+    static getSerials(limit, offset) {
         return new Promise((resolve, reject) => {
-            Serial.find({}, (err, serials ) => {
-                if (err) reject (err);
-                resolve(serials);
-            })
+            Serial.find({})
+                .skip(offset)
+                .limit(limit)
+                .exec((err, serials) => {
+                    if (err) reject(err);
+                    resolve(serials);
+                })
         });
     }
 
-    static getSerial() {
+    static getSerial(id) {
         return new Promise((resolve, reject) => {
-            Serial.findById(id, (err,data) => {
-                if (err) reject (err);
+            Serial.findById(id, (err, data) => {
+                if (err) reject(err);
                 resolve(data);
             })
         })
@@ -21,8 +24,8 @@ export default class SerialsService {
 
     static updateSerial(id, data) {
         return new Promise((resolve, reject) => {
-            Serial.findByIdAndUpdate(id, {new: true}, (err, data) => { //does this true is necessary here? check
-                if (err) reject (err);
+            Serial.findByIdAndUpdate(id, data, {new: true}, (err, data) => {
+                if (err) reject(err);
                 resolve(data);
             })
         })
@@ -30,9 +33,9 @@ export default class SerialsService {
 
     static createSerial(data) {
         return new Promise((resolve, reject) => {
-            let newSerial =  new Serial(data);
+            let newSerial = new Serial(data);
             newSerial.save((err, data) => {
-                if (err) reject (err);
+                if (err) reject(err);
                 resolve(data);
             })
         })
@@ -41,7 +44,7 @@ export default class SerialsService {
     static deleteSerial(id) {
         return new Promise((resolve, reject) => {
             Serial.findByIdAndDelete(id, (err) => {
-                if (err) reject (err);
+                if (err) reject(err);
                 resolve(true);
             })
         })

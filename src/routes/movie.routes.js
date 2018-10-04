@@ -1,6 +1,6 @@
-import { MovieController } from "../controllers/movie.controller";
-import { MovieUpdate, MovieAdd } from "../validators/movies.validator";
-import { celebrate } from 'celebrate';
+import {MovieController} from "../controllers/movie.controller";
+import {MovieUpdate, MovieAdd} from "../validators/movies.validator";
+import {celebrate} from 'celebrate';
 
 export default class MovieRoutes {
 
@@ -11,6 +11,6 @@ export default class MovieRoutes {
             .delete((req, res) => MovieController.deleteMovie(req, res));
 
         app.route('/movies/')
-            .post(celebrate(MovieAdd),(req, res) => MovieController.addMovie(req, res));
+            .post(celebrate(MovieAdd), (req, res) => MovieController.addMovie(req, res));
     }
 }

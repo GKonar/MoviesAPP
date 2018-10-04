@@ -14,3 +14,4 @@ export default class MoviesService {
     }
 };
 
+// Call the cursor.skip() method on a cursor to control where MongoDB begins returning results. This approach may be useful in implementing paginated results.
