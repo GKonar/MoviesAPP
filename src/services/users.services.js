@@ -1,4 +1,5 @@
 import {User} from '../models/user.model';
+import AuthServices from './auth.services';
 
 export default class UsersServices {
     static addUser(data) {
@@ -7,6 +8,7 @@ export default class UsersServices {
             newUser.save((err, data) => {
                 if (err) reject(err);
                 resolve(data);
+                AuthServices.authUser(data);
             })
         })
     }
