@@ -1,6 +1,8 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 import morgan from 'morgan';
+import {JWTListener} from '../events/listeners/jwt.listener';
+import {AuthListener} from '../events/listeners/auth.listener';
 
 export default class Middleware {
 
@@ -13,6 +15,9 @@ export default class Middleware {
         if (process.env.NODE_ENV !== 'prod') {
             app.use(morgan('dev'));
         }
+
+        //app.user(JWTListener);
+        //app.user(AuthListener);
     }
 
 }
