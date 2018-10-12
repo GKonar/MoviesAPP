@@ -1,4 +1,4 @@
-import { Joi } from 'celebrate';
+import {Joi} from 'celebrate';
 
 export const SerialUpdate = {
     body: {
@@ -18,6 +18,6 @@ export const SerialCreate = {
         episodes: Joi.number().required(),
         releaseDate: Joi.date().required()
     }
-}
+};
 
 

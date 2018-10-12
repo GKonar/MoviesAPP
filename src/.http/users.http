@@ -2,11 +2,14 @@ POST http://localhost:3001/users/
 Content-Type: application/json
 
 {
-  "username": "Konar",
-  "password": "dupa",
-  "firstName": "Gie",
-  "lastName": "Kon",
-  "email": "dupa@dupa.pl"
+  "username": "Justa",
+  "password": "solo",
+  "firstName": "Jus",
+  "lastName": "Ta",
+  "email": "get@better.pl"
 }
 ###
+GET http://localhost:3001/users/Justa
+Accept: application/json
 
+###

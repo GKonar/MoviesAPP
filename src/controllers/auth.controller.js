@@ -1,8 +1,8 @@
-import UsersServices from '../services/users.services';
+import AuthServices from "../services/auth.services";
 
-export class UsersController {
-    static addUser(req, res) {
-        UsersServices.addUser(req.body)
+export class AuthController {
+    static auth(req, res) {
+        AuthServices.auth(req.params.username)
             .then((data) => {
                 res.status(200).send(data)
             })
