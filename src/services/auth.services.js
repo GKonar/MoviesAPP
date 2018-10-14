@@ -11,7 +11,7 @@ export default class AuthServices {
                         if (err) reject(err);
                         if (!isMatch) reject(false);
 
-                        const token = jwt.sign({username} , 'shhhhh');
+                        const token = jwt.sign({user} , 'shhhhh');
                         resolve(token);
                     })
 

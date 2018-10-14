@@ -8,8 +8,19 @@ Content-Type: application/json
   "lastName": "Ta",
   "email": "get@better.pl"
 }
+
 ###
 GET http://localhost:3001/users/Justa
 Accept: application/json
+
+###
+
+POST http://localhost:3001/auth/
+Content-Type: application/json
+
+{
+  "username": "Justa",
+  "password": "solo"
+}
 
 ###
