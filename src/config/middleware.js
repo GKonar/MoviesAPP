@@ -10,14 +10,15 @@ export default class Middleware {
         app.use(bodyParser.json());
         app.use(bodyParser.urlencoded({extended: false}));
 
+
         app.use(express.static('public'));
 
         if (process.env.NODE_ENV !== 'prod') {
             app.use(morgan('dev'));
         }
 
-        //app.user(JWTListener);
-        //app.user(AuthListener);
+        app.use(JWTListener);
+        app.use(AuthListener);
     }
 
 }

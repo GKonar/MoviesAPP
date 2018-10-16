@@ -2,11 +2,11 @@ POST http://localhost:3001/users/
 Content-Type: application/json
 
 {
-  "username": "Justa",
-  "password": "solo",
-  "firstName": "Jus",
-  "lastName": "Ta",
-  "email": "get@better.pl"
+  "username": "Henryk",
+  "password": "oko",
+  "firstName": "Hen",
+  "lastName": "Ryk",
+  "email": "get@bettersoon.pl"
 }
 
 ###

@@ -3,18 +3,18 @@ import UserServices from "../../services/user.services";
 
 export function JWTListener(req, res, next) {
     if (typeof req.header('Authorization') !== 'undefined' && req.header('Authorization').startsWith('Bearer')) {
-        return req.header.authorization.split(' ')[1];
+        return req.header('Authorization').split(' ')[1];
 
-        const headerToken = req.header.authorization.split(' ')[1];
-        const decodedToken = jwt.decode(headerToken, {complete: true}); // using complete?
+        const headerToken = req.header('Authorization').split(' ')[1];
 
-        if (decodedToken !== undefined) {
-            const user = UserServices.getUserByUsername(decodedToken.username);
-
-            if (user !== undefined) {
-                const user = req.body.user;
+        jwt.verify(headerToken, 'shhhhh', function(err, decodedToken) { // Asynchronous
+             if (typeof decodedToken !== 'undefined') {
+                const user = UserServices.getUserByUsername(decodedToken.username);
+                if(user) {
+                    req.body.user = user;
+                }
             }
-        }
+        });
     }
     next();
 }
