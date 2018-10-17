@@ -7,5 +7,6 @@ export const AddUser = {
         firstName: Joi.string().required(),
         lastName: Joi.string().required(),
         email: Joi.string().required(),
+        user: Joi.object().required()
     }
 };

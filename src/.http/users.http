@@ -1,5 +1,6 @@
-POST http://localhost:3001/users/
+POST http://{{baseUrl}}/users/
 Content-Type: application/json
+Authorization: Bearer {{authToken}}
 
 {
   "username": "Henryk",
