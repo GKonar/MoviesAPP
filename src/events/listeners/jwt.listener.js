@@ -18,6 +18,8 @@ export function JWTListener(req, res, next) {
                     .catch(() => next())
             }
         });
+    } else {
+        next();
     }
 }
 

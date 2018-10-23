@@ -7,9 +7,9 @@ export function AuthListener(req, res, next) {
                 .then(() => {
                     next();
                 })
-                .catch(() => res.status(401).send({message: 'Unauthorized'}));
+                .catch(() => res.status(401).send({message: 'Unauthorized'}).end());
         } else {
-            res.status(401).send({message: 'Unauthorized'});
+            res.status(401).send({message: 'Unauthorized'}).end();
         }
     } else {
         next();
