@@ -6,8 +6,8 @@ export class AuthController {
             .then((token) => {
                 res.status(200).send({token})
             })
-            .catch((error) => {
-                res.status(400).send(error)
+            .catch(() => {
+                res.status(401).send({message: "Wrong credentials. Please enter your username or password again."}).end()
             })
     }
 }

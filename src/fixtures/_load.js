@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 import MoviesFixtures from './movies.fixtures';
 import SerialsFixtures from './serials.fixtures';
+import UsersFixtures from './users.fixtures';
 
 
 const fixtures = connect(process.env.URL);
@@ -19,5 +20,10 @@ fixtures.clear(function(err) {
     fixtures.load(SerialsFixtures, (err) => {
         if (err) throw (err);
         console.log('Serials fixtures loaded');
-    })
+    });
+
+    fixtures.load(UsersFixtures, (err) => {
+       if (err) throw (err);
+       console.log('Users fixtures loaded');
+    });
 });

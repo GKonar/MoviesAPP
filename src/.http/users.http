@@ -3,25 +3,18 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "username": "Henryk",
-  "password": "oko",
-  "firstName": "Hen",
-  "lastName": "Ryk",
-  "email": "get@bettersoon.pl"
+  "username": "Andrzej",
+  "password": "huj",
+  "firstName": "dan",
+  "lastName": "mark",
+  "email": "wez@kurwa.pl"
 }
 
 ###
-GET http://localhost:3001/users/Justa
+GET http://localhost:3001/users/Janek
 Accept: application/json
+Authorization: Bearer {{authToken}}
 
 ###
 
-POST http://localhost:3001/auth/
-Content-Type: application/json
 
-{
-  "username": "Justa",
-  "password": "solo"
-}
-
-###
