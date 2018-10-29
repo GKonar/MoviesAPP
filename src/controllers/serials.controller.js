@@ -22,7 +22,7 @@ export class SerialsController {
 
     static getSerial(req, res) {
         SerialsService.getSerial(req.params.id)
-            .then((serial) => {
+            .then((serial) => { // ten kod wykona się jeżeli promise z SerialsService zwróci resolve
                 res.status(200).send(serial);
             })
             .catch((error) => {
